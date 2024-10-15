@@ -1,0 +1,49 @@
+<MainWidget>:
+    orientation: 'vertical'
+    Label:
+        text: "Aplicativo de Controle de Estoque"
+        font_size: 24
+    Button:
+        text: "Inserir Item"
+        on_press: root.inserir_item()
+    Button:
+        text: "Remover Item"
+        on_press: root.remover_item()
+    Button:
+        text: "Ver Estoque"
+        on_press: root.ver_estoque()
+    Button:
+        text: "Sair"
+        on_press: root.sair_app()
+
+<InsertItemPopup>:
+    orientation: 'vertical'
+    Label:
+        text: "Nome do Item:"
+    TextInput:
+        id: nome_input
+    Label:
+        text: "Quantidade Comprada:"
+    TextInput:
+        id: quantidade_input
+    Label:
+        text: "Valor Unitário:"
+    TextInput:
+        id: valor_input
+    Button:
+        text: "Salvar"
+        on_press: root.salvar_item()
+
+<RemoveItemPopup>:
+    orientation: 'vertical'
+    Label:
+        text: "Nome do Item:"
+    TextInput:
+        id: nome_input
+    Label:
+        text: "Quantidade a Remover:"
+    TextInput:
+        id: quantidade_input
+    Button:
+        text: "Remover"
+        on_press: root.remover_do_estoque()
